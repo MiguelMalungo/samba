@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samba Football Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="assets/css/min/style.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" as="style">
+    <link rel="preload" href="assets/js/min/script.min.js" as="script">
+    
+    <link rel="stylesheet" href="assets/css/min/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .feature .btn:hover {
+            background-color: #3CB371 !important;
+            color: white !important;
+            border-color: transparent !important;
+        }
+        
+        /* Mobile button alternatives for touch devices */
+        .feature .btn:active,
+        .feature .btn:focus {
+            background-color: #3CB371 !important;
+            color: white !important;
+            border-color: transparent !important;
+            transform: scale(0.98) !important;
+            transition: all 0.1s ease !important;
+        }
+        
+        /* Ensure buttons are touch-friendly */
+        .feature .btn {
+            min-height: 44px !important;
+            min-width: 44px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            -webkit-tap-highlight-color: transparent !important;
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/mobile.css?v=20250828018">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img loading="lazy" src="assets/images/partners/logo_samba_l.png" alt="Samba Football Academy Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="vad-vi-gor.html">Vad vi gör</a>
+                    <ul class="submenu">
+                        <li><a href="bakgrund.html">Bakgrund</a></li>
+                        <li><a href="bli-en-sambaspelare.html">Bli en Sambaspelare</a></li>
+                        <li><a href="det-vackra-spelet.html">Det vackra spelet</a></li>
+                    </ul>
+                </li>
+                <li><a href="spela-i-samban.html">Spela i Samban</a>
+                    <ul class="submenu">
+                        <li><a href="hagsatra-ragsved.html">Hagsätra-Rågsved</a></li>
+                        <li><a href="hammarkullen.html">Hammarkullen</a></li>
+                        <li><a href="hasselbygard.html">Hässelbygård</a></li>
+                        <li><a href="hjallbo.html">Hjällbo</a></li>
+                        <li><a href="norra-botkyrka.html">Norra Botkyrka</a></li>
+                        <li><a href="rannebergen.html">Rannebergen</a></li>
+                        <li><a href="tynnered.html">Tynnered</a></li>
+                    </ul>
+                </li>
+                <li><a href="samhallsinsatser.html">Samhällsinsatser</a></li>
+                <li><a href="forebilder.html">Förebilder</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="hero" style="width: 100vw; max-width: 100%; margin: 0; padding: 0; overflow-x: hidden; position: relative; height: 100vh;">
+            <div class="hero-content" style="width: 100vw; max-width: 100%;">
+                <div style="position: relative; width: 100vw; height: 100vh; max-width: 100%; overflow: hidden;">
+                    <iframe id="vimeo-video" src="https://player.vimeo.com/video/739776995?h=6f0d60e5a2&autoplay=1&loop=1&background=1&muted=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;"></iframe>
+                    <script src="https://player.vimeo.com/api/player.js"></script>
+                </div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 1;"></div>
+                <button id="sound-toggle" style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 10; background-color: rgba(0,0,0,0.5); color: white; border: none; border-radius: 50%; width: 50px; height: 50px; cursor: pointer; display: flex; justify-content: center; align-items: center;">
+                    <i class="fas fa-volume-mute" style="font-size: 24px;"></i>
+                </button>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const soundToggle = document.getElementById('sound-toggle');
+                        const vimeoFrame = document.getElementById('vimeo-video');
+                        let isMuted = true;
+                        
+                        // Load Vimeo Player API
+                        var vimeoPlayer;
+                        var iframe = document.getElementById('vimeo-video');
+                        if (iframe) {
+                            vimeoPlayer = new Vimeo.Player(iframe);
+                        }
+                        
+                        soundToggle.addEventListener('click', function() {
+                            if (isMuted) {
+                                // Unmute video
+                                if (vimeoPlayer) {
+                                    vimeoPlayer.setVolume(1);
+                                    vimeoPlayer.setMuted(false);
+                                }
+                                soundToggle.innerHTML = '<i class="fas fa-volume-up" style="font-size: 24px;"></i>';
+                                isMuted = false;
+                            } else {
+                                // Mute video
+                                if (vimeoPlayer) {
+                                    vimeoPlayer.setMuted(true);
+                                }
+                                soundToggle.innerHTML = '<i class="fas fa-volume-mute" style="font-size: 24px;"></i>';
+                                isMuted = true;
+                            }
+                        });
+                    });
+                </script>
+                </div>
+            </div>
+            
+            <!-- Mobile Login Buttons - Only visible on mobile -->
+            <div class="mobile-login-buttons">
+                <a href="https://sambacertifiering.se/login" class="mobile-login-button samba">
+                    SAMBA<br>CERTIFIERING
+                </a>
+                <a href="https://sambafa.se/phpBB3/index.php" class="mobile-login-button">
+                    PELADA<br>LEDARE
+                </a>
+            </div>
+        </section>
+        
+        <section class="features" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px; padding: 40px 20px; max-width: 1400px; margin: 0 auto;">
+            <div class="feature" style="position: relative; height: 400px; color: white; padding: 20px; border-radius: 8px; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('assets/images/partners/peladaifittja.webp'); background-size: cover; background-position: center; filter: grayscale(100%);"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);"></div>
+                <div style="position: relative; z-index: 1; height: calc(100% - 60px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <h2 style="color: white; font-size: 1.8rem; margin-bottom: 15px;">Sambafotboll - Det vackra spelet</h2>
+                    <p style="color: white; max-width: 90%; margin: 0 auto; line-height: 1.6;">I Brasilien är fotbollen först och främst en form av underhållning. Viktigare än resultatet är hur man spelar. Sambafotbollen blir en hälsosam och positiv mötesplats för barn och unga.</p>
+                </div>
+                <div style="position: relative; z-index: 1; text-align: center; margin-top: 10px;">
+                    <a href="det-vackra-spelet.html" class="btn" style="background-color: transparent; border: 2px solid white; color: white; transition: all 0.3s; display: inline-block;">LÄS MER</a>
+                </div>
+            </div>
+            <div class="feature" style="position: relative; height: 400px; color: white; padding: 20px; border-radius: 8px; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('assets/images/partners/Bild-Fittja-Havin-rotated.webp'); background-size: cover; background-position: center; filter: grayscale(100%);"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);"></div>
+                <div style="position: relative; z-index: 1; height: calc(100% - 60px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <h2 style="color: white; font-size: 1.8rem; margin-bottom: 15px;">Lyckade samhällsinsatser</h2>
+                    <p style="color: white; max-width: 90%; margin: 0 auto; line-height: 1.6;">En del förortsområden präglas av stora sociala problem och utanförskap. Sambafotbollen är en kraft mot negativ passivitet och en verksamhet med gemenskap som ger glädje och hopp till barn och unga i dessa områden.</p>
+                </div>
+                <div style="position: relative; z-index: 1; text-align: center; margin-top: 10px;">
+                    <a href="samhallsinsatser.html" class="btn" style="background-color: transparent; border: 2px solid white; color: white; transition: all 0.3s; display: inline-block;">LÄS MER</a>
+                </div>
+            </div>
+            <div class="feature" style="position: relative; height: 400px; color: white; padding: 20px; border-radius: 8px; overflow: hidden;">
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('assets/images/vallingbykolloboy.jpg'); background-size: cover; background-position: center; filter: grayscale(100%);"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.6);"></div>
+                <div style="position: relative; z-index: 1; height: calc(100% - 60px); display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+                    <h2 style="color: white; font-size: 1.8rem; margin-bottom: 15px;">Bli en Sambaspelare</h2>
+                    <p style="color: white; max-width: 90%; margin: 0 auto; line-height: 1.6;">En Sambaspelare har som ledord: Kreativ, klok, modig och omtänksam. Vårt koncept förenar det bästa ur brasiliansk fotboll och kultur med modern idrottspsykologi.</p>
+                </div>
+                <div style="position: relative; z-index: 1; text-align: center; margin-top: 10px;">
+                    <a href="bli-en-sambaspelare.html" class="btn" style="background-color: transparent; border: 2px solid white; color: white; transition: all 0.3s; display: inline-block;">LÄS MER</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="testimonial-section" style="padding: 60px 20px; background-color: #f9f9f9;">
+            <div class="testimonial-carousel" style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <div class="testimonial-slide active">
+                    <p class="testimonial-quote" style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px; font-style: italic;">Sambafotbollen har gjort en otrolig skillnad för vår förening. Barnen kommer till träningen med ett leende och lämnar med ännu större glädje. Det handlar inte bara om fotboll, utan om att skapa positiva förebilder och framtidstro.</p>
+                    <p class="testimonial-author" style="font-weight: bold; color: #3CB371;">Johan Andersson, Ordförande IF Fotbollsklubben</p>
+                </div>
+                
+                <div class="testimonial-slide" style="display: none;">
+                    <p class="testimonial-quote" style="font-size: 1.2rem; line-height: 1.8; color: #333; margin-bottom: 20px; font-style: italic;">Samarbetet med Samba Football Academy har varit en framgångssaga för vår stadsdel. Deras engagemang för både fotbollen och samhällsutvecklingen är precis vad vi behöver för att skapa en positiv förändring för våra unga.</p>
+                    <p class="testimonial-author" style="font-weight: bold; color: #3CB371;">Maria Johansson, Projektledare Framtidsstaden</p>
+                </div>
+                
+                <div class="testimonial-controls" style="display: flex; justify-content: center; gap: 10px; margin-top: 30px;">
+                    <div class="testimonial-dot active" style="width: 12px; height: 12px; border-radius: 50%; background-color: #3CB371; cursor: pointer; transition: background-color 0.3s;"></div>
+                    <div class="testimonial-dot" style="width: 12px; height: 12px; border-radius: 50%; background-color: #ccc; cursor: pointer; transition: background-color 0.3s;"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="partners-section" style="padding: 60px 20px; background-color: white;">
+            <div class="partners-container" style="max-width: 1200px; margin: 0 auto;">
+                <div class="partners-heading" style="text-align: center; margin-bottom: 50px;">
+                    <h2 style="color: #333; font-size: 2.5rem; margin-bottom: 20px;">Våra Partners</h2>
+                    <p style="color: #666; font-size: 1.1rem; max-width: 600px; margin: 0 auto; line-height: 1.6;">Vi är stolta över att samarbeta med dessa organisationer som delar vår vision om att använda fotboll som ett verktyg för positiv förändring.</p>
+                </div>
+                <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin: 0;">
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner1.png" alt="Stockholm Stad" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner2.png" alt="Göteborgs Kommun" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner3.png" alt="Svenska Fotbollförbundet" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner4.png" alt="Framtidsstaden" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner5.png" alt="Idrottsförbundet" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner6.png" alt="Sportbolaget" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner7.png" alt="Ungdomsstyrelsen" style="max-width: 100%; max-height: 20px; object-fit: contain;">
+                    </div>
+                    <div class="partner-logo" style="height: 120px; background-color: #f5f5f5; border-radius: 8px; display: flex; align-items: center; justify-content: center; padding: 20px; transition: transform 0.3s ease, box-shadow 0.3s ease;">
+                        <img loading="lazy" src="assets/images/partners/partner8.png" alt="Fotbollsakademin" style="max-width: 100%; max-height: 100%; object-fit: contain;">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h3>Om Samba</h3>
+                <p>Samba Football Academy är en ideell förening som använder fotboll som ett verktyg för integration och positiv samhällsförändring.</p>
+                <p>Genom våra verksamheter i Stockholm och Göteborg skapar vi möjligheter för barn och ungdomar att utvecklas både som fotbollsspelare och som individer.</p>
+            </div>
+            
+            <div class="footer-column footer-links">
+                <h3>Snabblänkar</h3>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="vad-vi-gor.html">Vad vi gör</a></li>
+                    <li><a href="spela-i-samban.html">Spela i Samban</a></li>
+                    <li><a href="samhallsinsatser.html">Samhällsinsatser</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-social">
+                <h3>Följ Oss</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-spotify"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <p style="margin-top: 20px;">Email: sambaerik@sambafa.se</p>
+                <p>Telefon: +46736986657</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; Samba Football Academy 2025</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/min/script.min.js" defer></script>
+    <script src="assets/js/mobile-menu.js"></script>
+    <script src="assets/js/touch-enhancements.js"></script>
+</body>
+</html>

@@ -1,0 +1,424 @@
+/* Mobile Responsive Styles */
+
+/* Header and Navigation Styles */
+@media (max-width: 992px) {
+    /* Header positioning */
+    header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        background: transparent !important;
+        padding: 20px 50px !important;
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        z-index: 1000 !important;
+    }
+    
+    header.scrolled {
+        background: rgba(255,255,255,0.98) !important;
+        padding: 15px 50px !important;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+    }
+    
+    /* Desktop navigation */
+    nav {
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    /* Show desktop menu */
+    .main-menu {
+        display: flex !important;
+    }
+    
+    /* Mobile menu toggle button */
+    .mobile-menu-toggle {
+        display: block !important;
+        position: absolute !important;
+        right: 20px !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        width: 40px !important;
+        height: 40px !important;
+        color: white !important;
+        cursor: pointer !important;
+        z-index: 1000 !important;
+    }
+    
+    .mobile-menu-toggle i {
+        font-size: 32px !important;
+    }
+    
+    header.scrolled .mobile-menu-toggle {
+        color: #333 !important;
+    }
+}
+
+/* Menu Overlay - REMOVED TO FIX DARK LAYER ISSUE */
+.menu-overlay {
+    display: none !important;
+}
+
+.menu-overlay.active {
+    display: none !important;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+/* General responsive adjustments */
+@media (max-width: 992px) {
+    /* Menu items */
+    .main-menu > li {
+        display: block;
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+    
+    .main-menu > li > a {
+        color: #333 !important;
+        font-size: 1.1rem;
+        padding: 12px 0;
+        display: block;
+        width: 100%;
+    }
+    
+    .submenu {
+        position: static !important;
+        width: 100%;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+        border-radius: 0;
+        margin-top: 5px;
+        margin-left: 15px;
+        padding: 10px;
+        background: #f5f5f5;
+    }
+    
+    /* Only show submenu on hover for desktop */
+    @media (min-width: 993px) {
+        .main-menu > li:hover .submenu {
+            display: block;
+        }
+    }
+    
+    /* Make submenu items more tappable on mobile */
+    .submenu > li > a {
+        display: block;
+        padding: 10px 0;
+        width: 100%;
+    }
+    
+    /* Add styles for has-submenu class */
+    .has-submenu > a {
+        position: relative;
+    }
+    
+    .has-submenu > a:after {
+        content: '\f107';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        margin-left: 5px;
+    }
+    
+
+    .page-hero {
+        height: 60vh;
+    }
+    
+    .callout-container {
+        flex-direction: column;
+    }
+    
+    .callout-content, .callout-video {
+        width: 100%;
+    }
+    
+    .info-section {
+        padding: 50px 20px;
+    }
+    
+    .info-container {
+        flex-direction: column;
+    }
+    
+    .info-content, .info-image {
+        width: 100%;
+    }
+    
+    /* Ensure grid layout changes to single column on mobile with image below text */
+    .info-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    .info-grid .info-content {
+        order: 1;
+    }
+    
+    .info-grid .info-image {
+        order: 2;
+        margin-top: 20px;
+    }
+}
+
+/* Responsive Video Scaling */
+@media (max-width: 992px) {
+    /* Hero video scaling - index page */
+    .hero, .hero-content, .hero-content > div {
+        height: 60vh !important;
+        min-height: 400px !important;
+    }
+    
+    .hero iframe, .page-hero iframe {
+        width: 100% !important;
+        height: 100% !important;
+        min-width: 100% !important;
+        min-height: 100% !important;
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+    
+    /* Page hero video scaling - vad-vi-gor page */
+    .page-hero {
+        height: 50vh !important;
+        min-height: 350px !important;
+    }
+    
+    .page-hero > div {
+        height: 100% !important;
+    }
+}
+
+/* Login buttons styling - stick to bottom of hero section with zero padding */
+.login-buttons {
+    position: absolute !important;
+    bottom: 0 !important;
+    right: 20px !important;
+    z-index: 100 !important;
+    display: flex !important;
+    gap: 5px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Adjust text positioning in login buttons */
+.login-buttons div[style*="position: absolute"][style*="display: flex"] {
+    padding-bottom: 12px !important;
+}
+
+@media (max-width: 768px) {
+    .login-buttons div[style*="position: absolute"][style*="display: flex"] {
+        padding-bottom: 10px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-buttons div[style*="position: absolute"][style*="display: flex"] {
+        padding-bottom: 8px !important;
+    }
+}
+
+/* Ensure hero sections maintain proper positioning */
+.hero, .page-hero {
+    position: relative !important;
+    overflow: hidden !important;
+    height: 85vh !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+    }
+    
+    .page-hero {
+        height: 40vh !important;
+        min-height: 300px !important;
+        position: relative !important;
+    }
+    
+    .hero, .hero-content, .hero-content > div {
+        height: 50vh !important;
+        min-height: 350px !important;
+        position: relative !important;
+    }
+    
+    /* Ensure login buttons stay at the bottom on smaller screens */
+    .login-buttons {
+        right: 10px !important;
+        bottom: 0 !important;
+    }
+    
+    .features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .feature {
+        height: 350px !important;
+    }
+    
+    .testimonial-content {
+        padding: 20px;
+    }
+    
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+    
+    .contact-container {
+        width: calc(100% - 40px) !important;
+        padding: 0 !important;
+    }
+    
+    .contact-container > div {
+        padding: 30px !important;
+    }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-width: 768px) and (orientation: landscape) {
+    .login-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 5px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+    }
+}
+
+/* Mobile phone adjustments */
+@media (max-width: 480px) {
+    header {
+        padding: 10px 20px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+    
+    header.scrolled .logo img {
+        height: 40px;
+    }
+    
+    .page-hero {
+        height: 40vh;
+        position: relative !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+    
+    .feature {
+        height: 300px !important;
+    }
+    
+    /* Feature boxes */
+    .features-container {
+        flex-direction: column;
+        padding: 20px 10px;
+    }
+    
+    .feature {
+        width: 100%;
+        margin-bottom: 20px;
+        height: auto !important;
+        min-height: 450px;
+        padding: 30px 15px !important;
+    }
+    
+    .feature p {
+        max-width: 100% !important;
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+        margin: 15px auto !important;
+    }
+    
+    /* Fix login buttons on mobile */
+    
+    /* Adjust sound toggle button position */
+    #sound-toggle {
+        bottom: 10px !important;
+        left: 10px !important;
+        transform: scale(0.9) !important;
+    }
+    
+    .feature {
+        padding: 15px !important;
+    }
+    
+    .feature h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .feature p {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Login buttons */
+    .login-buttons {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 5px !important;
+        right: 10px !important;
+        bottom: 10px !important;
+        transform: none !important;
+    }
+    
+    .login-buttons img {
+        width: 80px !important;
+        height: auto !important;
+    }
+    
+    
+    .login-buttons div[style*="color: black"] {
+        font-size: 12px !important;
+    }
+    
+    .login-buttons div[style*="color: #3CB371"] {
+        font-size: 13px !important;
+    }
+    
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 25px !important;
+    }
+    
+    .contact-item i {
+        margin-bottom: 10px;
+    }
+    
+    .contact-container > div {
+        padding: 20px !important;
+    }
+    
+    form input, form textarea {
+        font-size: 16px !important; /* Prevents zoom on focus in iOS */
+    }
+    
+    /* Hide email and telephone in footer for mobile */
+    .footer-social p {
+        display: none !important;
+    }
+}

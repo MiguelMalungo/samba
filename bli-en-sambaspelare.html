@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bli en Sambaspelare | Samba Football Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="assets/css/min/style.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" as="style">
+    <link rel="preload" href="assets/js/min/script.min.js" as="script">
+    <link rel="stylesheet" href="assets/css/min/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .page-hero {
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 0 20px;
+        }
+        
+        .info-section {
+            padding: 72px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .steps-container {
+            margin-top: 40px;
+        }
+        
+        .step-item {
+            display: flex;
+            margin-bottom: 30px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            background-color: #3CB371;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        .step-content {
+            flex-grow: 1;
+        }
+        
+        .step-content h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #3CB371;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 500;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        
+        .cta-button:hover {
+            background-color: #329760;
+        }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/mobile.css?v=20250828018">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img loading="lazy" src="assets/images/partners/logo_samba_l.png" alt="Samba Football Academy Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="vad-vi-gor.html">Vad vi gör</a>
+                    <ul class="submenu">
+                        <li><a href="bakgrund.html">Bakgrund</a></li>
+                        <li><a href="bli-en-sambaspelare.html">Bli en Sambaspelare</a></li>
+                        <li><a href="det-vackra-spelet.html">Det vackra spelet</a></li>
+                    </ul>
+                </li>
+                <li><a href="spela-i-samban.html">Spela i Samban</a>
+                    <ul class="submenu">
+                        <li><a href="hagsatra-ragsved.html">Hagsätra-Rågsved</a></li>
+                        <li><a href="hammarkullen.html">Hammarkullen</a></li>
+                        <li><a href="hasselbygard.html">Hässelbygård</a></li>
+                        <li><a href="hjallbo.html">Hjällbo</a></li>
+                        <li><a href="norra-botkyrka.html">Norra Botkyrka</a></li>
+                        <li><a href="rannebergen.html">Rannebergen</a></li>
+                        <li><a href="tynnered.html">Tynnered</a></li>
+                    </ul>
+                </li>
+                <li><a href="samhallsinsatser.html">Samhällsinsatser</a></li>
+                <li><a href="forebilder.html">Förebilder</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="width: 100vw; max-width: 100%; margin: 0; padding: 0; overflow-x: hidden; position: relative; height: 100vh;">
+            <div class="hero-content" style="width: 100vw; max-width: 100%;">
+                <div style="position: relative; width: 100vw; height: 100vh; max-width: 100%; overflow: hidden;">
+                    <video autoplay muted loop playsinline poster="assets/images/partners/Bild-Ragsved-Hedi-rotated.webp" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover; object-position: center bottom;">
+                        <source src="assets/videos/My Movie.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 1;"></div>
+                <div class="page-hero-content" style="position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto; padding-top: 40vh;">
+                    <h1 style="color: white; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Bli en Sambaspelare</h1>
+                    <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Lär dig spela fotboll med glädje och kreativitet</p>
+                </div>
+            </div>
+                                <div style="color: #3CB371; font-weight: bold; text-align: center; font-size: 15px; font-family: 'Roboto Condensed', sans-serif; letter-spacing: -0.5px; line-height: 1.1;"><strong>SAMBA-<br>CERTIFIERING</strong></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div>
+                    <a href="https://sambafa.se/phpBB3/index.php" style="text-decoration: none; display: block;">
+                        <div style="position: relative;">
+                            <img src="assets/images/partners/banner.png" alt="Banner" style="width: 102.5px; height: auto; display: block;">
+                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 12px;">
+                                <div style="color: black; font-weight: bold; text-transform: uppercase; font-size: 14px; font-family: 'Roboto Condensed', sans-serif; letter-spacing: -0.5px; margin-bottom: 3px;">LOGGA IN</div>
+                                <div style="color: #3CB371; font-weight: bold; text-align: center; font-size: 15px; font-family: 'Roboto Condensed', sans-serif; letter-spacing: -0.5px; line-height: 1.1;"><strong>PELADA-<br>LEDARE</strong></div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-content">
+                        <h2>Bli en Sambaspelare</h2>
+                        <p>Att bli en Sambaspelare handlar om mer än att bara lära sig fotbollsteknik. Det handlar om att utvecklas som person, att lära sig värderingar som respekt, ansvar och gemenskap, och att bli en positiv förebild för andra.</p>
+                        <p>Hos Samba Football Academy får du möjlighet att utveckla dina fotbollsfärdigheter under ledning av erfarna tränare som brinner för att lära ut den brasilianska fotbollens glädje och kreativitet. Samtidigt får du vara del av en gemenskap där alla är välkomna och respekterade.</p>
+                        <p>Vår träningsmetodik bygger på den brasilianska fotbollsfilosofin, där teknik, kreativitet och spelglädje står i centrum. Vi tror på att utveckla spelare som vågar ta egna beslut, som är kreativa och som spelar med glädje.</p>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="kontakt.html" class="btn">Kontakta oss</a>
+                        </div>
+                    </div>
+                    <div class="info-image">
+                        <img src="assets/images/partners/peladaifittja.webp" alt="Sambaspelare i träning" style="width: 100%; border-radius: 8px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" style="background-color: #f9f9f9;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 40px;">Hur blir jag en Sambaspelare?</h2>
+                <div class="steps-container">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Hitta en träningsplats nära dig</h3>
+                            <p>Vi har träningsplatser i flera stadsdelar i Stockholm och Göteborg. Kolla in vår sida "Spela i Samban" för att hitta den träningsplats som passar dig bäst.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Kontakta oss</h3>
+                            <p>Fyll i kontaktformuläret på vår hemsida eller skicka ett mail till info@sambafootballacademy.se för att anmäla ditt intresse.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Kom på en provträning</h3>
+                            <p>Du är välkommen att prova på en träning för att se om Samba Football Academy är något för dig. Våra tränare kommer att ta emot dig och introducera dig till vår träningsmetodik.</p>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Bli en del av gemenskapen</h3>
+                            <p>Efter provträningen kan du välja att bli en del av Samba Football Academy. Du får då tillgång till regelbundna träningar, events och aktiviteter.</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="spela-i-samban.html" class="cta-button" style="font-size: 18px; font-weight: bold;">Hitta en träningsplats</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h3>Om Samba</h3>
+                <p>Samba Football Academy är en ideell förening som använder fotboll som ett verktyg för integration och positiv samhällsförändring.</p>
+                <p>Genom våra verksamheter i Stockholm och Göteborg skapar vi möjligheter för barn och ungdomar att utvecklas både som fotbollsspelare och som individer.</p>
+            </div>
+            
+            <div class="footer-column footer-links">
+                <h3>Snabblänkar</h3>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="vad-vi-gor.html">Vad vi gör</a></li>
+                    <li><a href="spela-i-samban.html">Spela i Samban</a></li>
+                    <li><a href="samhallsinsatser.html">Samhällsinsatser</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-social">
+                <h3>Följ Oss</h3>
+                <ul>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-spotify"></i></a></li>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <p style="margin-top: 20px;">Email: sambaerik@sambafa.se</p>
+                <p>Telefon: +46736986657</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; Samba Football Academy 2025</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>

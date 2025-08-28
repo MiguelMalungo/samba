@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Det vackra spelet | Samba Football Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preload" href="assets/css/min/style.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" as="style">
+    <link rel="preload" href="assets/js/min/script.min.js" as="script">
+    <link rel="stylesheet" href="assets/css/min/style.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .page-hero {
+            height: 60vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            padding: 0 20px;
+        }
+        
+        .info-section {
+            padding: 72px 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .principles-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .principle-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            padding: 30px;
+            transition: transform 0.3s;
+        }
+        
+        .principle-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .principle-card i {
+            color: #3CB371;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .principle-card h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+        
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="assets/css/mobile.css?v=20250828018">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img loading="lazy" src="assets/images/partners/logo_samba_l.png" alt="Samba Football Academy Logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="main-menu">
+                <li><a href="vad-vi-gor.html">Vad vi gör</a>
+                    <ul class="submenu">
+                        <li><a href="bakgrund.html">Bakgrund</a></li>
+                        <li><a href="bli-en-sambaspelare.html">Bli en Sambaspelare</a></li>
+                        <li><a href="det-vackra-spelet.html">Det vackra spelet</a></li>
+                    </ul>
+                </li>
+                <li><a href="spela-i-samban.html">Spela i Samban</a>
+                    <ul class="submenu">
+                        <li><a href="hagsatra-ragsved.html">Hagsätra-Rågsved</a></li>
+                        <li><a href="hammarkullen.html">Hammarkullen</a></li>
+                        <li><a href="hasselbygard.html">Hässelbygård</a></li>
+                        <li><a href="hjallbo.html">Hjällbo</a></li>
+                        <li><a href="norra-botkyrka.html">Norra Botkyrka</a></li>
+                        <li><a href="rannebergen.html">Rannebergen</a></li>
+                        <li><a href="tynnered.html">Tynnered</a></li>
+                    </ul>
+                </li>
+                <li><a href="samhallsinsatser.html">Samhällsinsatser</a></li>
+                <li><a href="forebilder.html">Förebilder</a></li>
+                <li><a href="partners.html">Partners</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="width: 100vw; max-width: 100%; margin: 0; padding: 0; overflow-x: hidden; position: relative; height: 100vh;">
+            <div class="hero-content" style="width: 100vw; max-width: 100%;">
+                <div style="position: relative; width: 100vw; height: 100vh; max-width: 100%; overflow: hidden;">
+                    <img src="assets/images/kollouppvarmining.jpg" alt="Det vackra spelet" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;">
+                </div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.3); z-index: 1;"></div>
+                <div class="page-hero-content" style="position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto; padding-top: 40vh;">
+                    <h1 style="color: white; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Det vackra spelet</h1>
+                    <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Sambafotbollens filosofi och spelstil</p>
+                </div>
+            </div>
+            <!-- Mobile Login Buttons - Only visible on mobile -->
+            <div class="mobile-login-buttons">
+                <a href="https://sambacertifiering.se/login" class="mobile-login-button samba">
+                    SAMBA<br>CERTIFIERING
+                </a>
+                <a href="https://sambafa.se/phpBB3/index.php" class="mobile-login-button">
+                    PELADA<br>LEDARE
+                </a>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid" style="align-items: flex-start;">
+                    <div class="info-content" style="display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                        <h2>Det vackra spelet - Sambafotboll</h2>
+                        <p>Sambafotboll är vår tolkning av "Jogo Bonito" - det vackra spelet - som har gjort brasiliansk fotboll känd över hela världen. Det handlar om att spela med glädje, kreativitet och passion.</p>
+                        <p>Vår träningsmetodik bygger på den brasilianska fotbollsfilosofin, där teknik, kreativitet och spelglädje står i centrum. Vi tror på att utveckla spelare som vågar ta egna beslut, som är kreativa och som spelar med glädje.</p>
+                        <p>Genom Sambafotboll lär vi inte bara ut fotbollsteknik, utan också värderingar som respekt, ansvar och gemenskap. Vi tror att fotboll kan vara ett kraftfullt verktyg för att utveckla både individer och samhällen.</p>
+                    </div>
+                    <div class="info-image" style="display: flex; align-items: center; justify-content: center;">
+                        <img src="assets/images/vallingbykolloErik.jpg" alt="Vallingby Kollo Erik" style="width: 70%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section" style="background-color: #f9f9f9;">
+            <div class="container">
+                <h2 style="text-align: center; margin-bottom: 20px;">Principerna bakom Sambafotboll</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Vår träningsmetodik bygger på följande principer som tillsammans skapar det vi kallar Sambafotboll - det vackra spelet.</p>
+                
+                <div class="principles-container">
+                    <div class="principle-card">
+                        <i class="fas fa-smile"></i>
+                        <h3>Glädje</h3>
+                        <p>Fotboll ska vara roligt! Vi tror att spelare utvecklas bäst när de känner glädje i sitt spel. Därför skapar vi en positiv träningsmiljö där alla känner sig välkomna och uppskattade.</p>
+                    </div>
+                    <div class="principle-card">
+                        <i class="fas fa-lightbulb"></i>
+                        <h3>Kreativitet</h3>
+                        <p>Vi uppmuntrar spelare att vara kreativa och att våga prova nya saker. Genom att skapa en miljö där misstag är tillåtna, hjälper vi spelare att utveckla sin kreativitet och sitt självförtroende.</p>
+                    </div>
+                    <div class="principle-card">
+                        <i class="fas fa-running"></i>
+                        <h3>Teknik</h3>
+                        <p>Teknisk skicklighet är en central del av Sambafotboll. Vi lägger stor vikt vid att utveckla spelarnas tekniska färdigheter genom övningar som är både utmanande och roliga.</p>
+                    </div>
+                    <div class="principle-card">
+                        <i class="fas fa-users"></i>
+                        <h3>Lagspel</h3>
+                        <p>Fotboll är en lagsport, och vi lär våra spelare att samarbeta och att respektera varandra. Genom att utveckla goda lagspelare bidrar vi till att skapa en positiv laganda.</p>
+                    </div>
+                    <div class="principle-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Spelförståelse</h3>
+                        <p>Vi hjälper spelare att utveckla sin spelförståelse genom att uppmuntra dem att tänka själva och att fatta egna beslut på planen. Detta skapar smarta spelare som kan anpassa sig till olika spelsituationer.</p>
+                    </div>
+                    <div class="principle-card">
+                        <i class="fas fa-heart"></i>
+                        <h3>Passion</h3>
+                        <p>Passion är drivkraften bakom all utveckling. Vi hjälper våra spelare att hitta och utveckla sin passion för fotboll, vilket ger dem motivation att fortsätta utvecklas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="info-section">
+            <div class="container">
+                <div class="info-grid">
+                    <div class="info-image">
+                        <img src="assets/images/partners/Bild-Ragsved-Hedi-rotated.webp" alt="Träning i Sambafotboll" style="width: 70%; border-radius: 8px; display: block; margin: 0 auto;">
+                    </div>
+                    <div class="info-content">
+                        <h2>Träningsmetodik</h2>
+                        <p>Vår träningsmetodik är inspirerad av brasiliansk fotboll och anpassad till svenska förhållanden. Vi fokuserar på att skapa en positiv och utvecklande träningsmiljö där alla spelare får möjlighet att utvecklas utifrån sina egna förutsättningar.</p>
+                        <p>Våra träningar innehåller en blandning av tekniska övningar, spelövningar och smålagsspel. Vi lägger stor vikt vid att övningarna ska vara både utmanande och roliga, och att de ska ge spelarna många bollkontakter.</p>
+                        <p>Genom vår unika kombination av fotbollsträning och värdegrundsutbildning hjälper vi våra spelare att utvecklas både på och utanför planen. Vi tror att detta skapar inte bara bättre fotbollsspelare, utan också bättre människor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column footer-about">
+                <h3>Om Samba</h3>
+                <p>Samba Football Academy är en ideell förening som använder fotboll som ett verktyg för integration och positiv samhällsförändring.</p>
+                <p>Genom våra verksamheter i Stockholm och Göteborg skapar vi möjligheter för barn och ungdomar att utvecklas både som fotbollsspelare och som individer.</p>
+            </div>
+            
+            <div class="footer-column footer-links">
+                <h3>Snabblänkar</h3>
+                <ul>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="vad-vi-gor.html">Vad vi gör</a></li>
+                    <li><a href="spela-i-samban.html">Spela i Samban</a></li>
+                    <li><a href="samhallsinsatser.html">Samhällsinsatser</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column footer-social">
+                <h3>Följ Oss</h3>
+                <ul>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-spotify"></i></a></li>
+                    <li><a href="#" style="color: #FFD700;"><i class="fab fa-youtube"></i></a></li>
+                </ul>
+                <p style="margin-top: 20px;">Email: sambaerik@sambafa.se</p>
+                <p>Telefon: +46736986657</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; Samba Football Academy 2025</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/min/script.min.js" defer></script>
+    <script src="assets/js/mobile-menu.js"></script>
+</body>
+</html>
