@@ -106,7 +106,47 @@
             }
         }
     </style>
-    <link rel="stylesheet" href="assets/css/mobile.css?v=20250828018">
+    <link rel="stylesheet" href="assets/css/mobile.css">
+    <style>
+        /* Responsive hero for Bli en Sambaspelare page */
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh !important;
+                min-height: 350px !important;
+            }
+            
+            .hero-content > div,
+            .hero-content > div video {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center bottom !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 40vh !important;
+                min-height: 300px !important;
+            }
+            
+            .page-hero-content {
+                padding-top: 15vh !important;
+            }
+            
+            .page-hero-content h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .page-hero-content p {
+                font-size: 1rem !important;
+            }
+            
+            .hero-content > div video {
+                object-position: center !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -161,23 +201,7 @@
                     <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Lär dig spela fotboll med glädje och kreativitet</p>
                 </div>
             </div>
-                                <div style="color: #3CB371; font-weight: bold; text-align: center; font-size: 15px; font-family: 'Roboto Condensed', sans-serif; letter-spacing: -0.5px; line-height: 1.1;"><strong>SAMBA-<br>CERTIFIERING</strong></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div>
-                    <a href="https://sambafa.se/phpBB3/index.php" style="text-decoration: none; display: block;">
-                        <div style="position: relative;">
-                            <img src="assets/images/partners/banner.png" alt="Banner" style="width: 102.5px; height: auto; display: block;">
-                            <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding-bottom: 12px;">
-                                <div style="color: black; font-weight: bold; text-transform: uppercase; font-size: 14px; font-family: 'Roboto Condensed', sans-serif; letter-spacing: -0.5px; margin-bottom: 3px;">LOGGA IN</div>
-                                <div style="color: #3CB371; font-weight: bold; text-align: center; font-size: 15px; font-family: 'Roboto Condensed', sans-serif; letter-spacing: -0.5px; line-height: 1.1;"><strong>PELADA-<br>LEDARE</strong></div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+
         </section>
 
         <section class="info-section">
@@ -188,7 +212,7 @@
                         <p>Att bli en Sambaspelare handlar om mer än att bara lära sig fotbollsteknik. Det handlar om att utvecklas som person, att lära sig värderingar som respekt, ansvar och gemenskap, och att bli en positiv förebild för andra.</p>
                         <p>Hos Samba Football Academy får du möjlighet att utveckla dina fotbollsfärdigheter under ledning av erfarna tränare som brinner för att lära ut den brasilianska fotbollens glädje och kreativitet. Samtidigt får du vara del av en gemenskap där alla är välkomna och respekterade.</p>
                         <p>Vår träningsmetodik bygger på den brasilianska fotbollsfilosofin, där teknik, kreativitet och spelglädje står i centrum. Vi tror på att utveckla spelare som vågar ta egna beslut, som är kreativa och som spelar med glädje.</p>
-                        <div style="text-align: center; margin-top: 20px;">
+                        <div style="text-align: right; margin-top: 20px;">
                             <a href="kontakt.html" class="btn">Kontakta oss</a>
                         </div>
                     </div>

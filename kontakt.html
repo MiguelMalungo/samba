@@ -13,6 +13,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Condensed:wght@400;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/mobile.css?v=20250828018">
+    <style>
+        /* Responsive hero for Kontakt page */
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh !important;
+                min-height: 350px !important;
+            }
+            
+            .hero-content > div,
+            .hero-content > div img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 40vh !important;
+                min-height: 300px !important;
+            }
+            
+            .page-hero-content {
+                padding-top: 15vh !important;
+            }
+            
+            .page-hero-content h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .page-hero-content p {
+                font-size: 1rem !important;
+                padding: 0 20px !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -59,21 +96,13 @@
                 <div style="position: relative; width: 100vw; height: 100vh; max-width: 100%; overflow: hidden;">
                     <img src="assets/images/samba2.jpg" alt="Kontakt" style="position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; object-fit: cover;">
                 </div>
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); z-index: 1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.2); z-index: 1;"></div>
                 <div class="page-hero-content" style="position: relative; z-index: 2; text-align: center; max-width: 800px; margin: 0 auto; padding-top: 40vh;">
                     <h1 style="color: white; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">Kontakta oss</h1>
                     <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Har du frågor eller vill samarbeta med oss? Vi hörs gärna från dig!</p>
                 </div>
             </div>
-            <!-- Mobile Login Buttons - Only visible on mobile -->
-            <div class="mobile-login-buttons">
-                <a href="https://sambacertifiering.se/login" class="mobile-login-button samba">
-                    SAMBA<br>CERTIFIERING
-                </a>
-                <a href="https://sambafa.se/phpBB3/index.php" class="mobile-login-button">
-                    PELADA<br>LEDARE
-                </a>
-            </div>
+
         </section>
         
         <!-- Spela i Samban section removed as requested -->

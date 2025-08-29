@@ -106,6 +106,42 @@
         }
     </style>
     <link rel="stylesheet" href="assets/css/mobile.css?v=20250828018">
+    <style>
+        /* Responsive hero for Det vackra spelet page */
+        @media (max-width: 768px) {
+            .hero {
+                height: 50vh !important;
+                min-height: 350px !important;
+            }
+            
+            .hero-content > div,
+            .hero-content > div img {
+                width: 100% !important;
+                height: 100% !important;
+                object-fit: cover !important;
+                object-position: center !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero {
+                height: 40vh !important;
+                min-height: 300px !important;
+            }
+            
+            .page-hero-content {
+                padding-top: 15vh !important;
+            }
+            
+            .page-hero-content h1 {
+                font-size: 2.5rem !important;
+            }
+            
+            .page-hero-content p {
+                font-size: 1rem !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -157,15 +193,7 @@
                     <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Sambafotbollens filosofi och spelstil</p>
                 </div>
             </div>
-            <!-- Mobile Login Buttons - Only visible on mobile -->
-            <div class="mobile-login-buttons">
-                <a href="https://sambacertifiering.se/login" class="mobile-login-button samba">
-                    SAMBA<br>CERTIFIERING
-                </a>
-                <a href="https://sambafa.se/phpBB3/index.php" class="mobile-login-button">
-                    PELADA<br>LEDARE
-                </a>
-            </div>
+
         </section>
 
         <section class="info-section">
